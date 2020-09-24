@@ -1,6 +1,6 @@
 import React from 'react';
 import "./SidebarOptions.css";
-import Icon from '@material-ui/core/Icon';
+//import Icon from '@material-ui/core/Icon';
 
 function SidebarOptions({ title, Icon }) {
     return (

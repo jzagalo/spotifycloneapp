@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./Sidebar.css";
 import SidebarOptions from './SidebarOptions';
 import HomeIcon from "@material-ui/icons/Home";
@@ -7,8 +7,7 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { useDataLayerValue } from './Datalayer';
 
 function Sidebar() {    
-    const [ { playlists }, dispatch ] = useDataLayerValue();
-    
+    const [ { playlists } ] = useDataLayerValue();    
     
     return (
         <div className="sidebar">
@@ -19,8 +18,7 @@ function Sidebar() {
             <br/>
             <strong className="sidebar__title">PLAYLISTS</strong>
             <hr/>
-            { playlists?.items?.map((playlist, index) => <SidebarOptions title={playlist.name} key={index} /> )}
-           
+            { playlists?.items?.map((playlist, index) => <SidebarOptions title={playlist.name} key={index} /> )}           
         </div>
     );   
 }
